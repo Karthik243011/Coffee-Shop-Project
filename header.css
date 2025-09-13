@@ -119,7 +119,7 @@ header {
 
   /* Shrink logo & cart icon on mobile */
   .logo img {
-    width: 35px;
+    width: 30px;
   }
 
   .cart-icon img {
