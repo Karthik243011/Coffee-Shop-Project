@@ -1,7 +1,7 @@
 .cart-section {
-  max-width: 400px;
+  max-width: 450px;
   margin: 40px auto;
-  padding: 20px;
+  padding: 25px;
   background-color: #f9f5f0;
   border-radius: 12px;
   box-shadow: 0 4px 15px rgba(0,0,0,0.1);
@@ -11,44 +11,63 @@
 .cart-section h2 {
   font-size: 1.8rem;
   color: #3e2723;
-  margin-bottom: 15px;
+  margin-bottom: 20px;
+  font-weight: 600;
 }
 
 #cart-items {
   list-style: none;
   padding: 0;
-  margin: 0 0 15px 0;
+  margin: 0 0 20px 0;
   text-align: left;
 }
 
 #cart-items li {
   background: #fff;
-  margin: 5px 0;
-  padding: 10px;
-  border-radius: 8px;
+  margin: 8px 0;
+  padding: 12px 14px;
+  border-radius: 10px;
   font-size: 1rem;
   color: #3e2723;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+  font-weight: 500;
+  display: flex;
+  justify-content: space-between; /* name + price nicely aligned */
+  align-items: center;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+  transition: transform 0.2s ease;
+}
+
+#cart-items li:hover {
+  transform: translateX(4px);
 }
 
 .cart-section p {
   font-size: 1.2rem;
   font-weight: bold;
   color: #3e2723;
+  margin-top: 15px;
+  border-top: 1px solid rgba(0,0,0,0.1);
+  padding-top: 10px;
 }
 
 @media (max-width: 600px) {
   .cart-section {
-    padding: 10px;
+    padding: 15px;
+    margin: 20px;
   }
 
   .cart-section h2 {
-    font-size: 1.3rem;
+    font-size: 1.4rem;
+    margin-bottom: 15px;
   }
 
   #cart-items li {
     font-size: 0.9rem;
-    padding: 6px;
+    padding: 8px 10px;
+    margin: 6px 0;
+    flex-direction: column; /* stack items on small screens */
+    align-items: flex-start;
+    gap: 5px;
   }
 
   .cart-section p {

@@ -1,65 +1,114 @@
-
+/* Logo */
 .logo img {
-    width: 100px;
-    height: 100px;
+  width: 100px;
+  height: auto; /* keep proportions */
 }
 
+/* Hero section */
 .hero-align {
-    background: url("./im/background Coffee.jpg") no-repeat center center/cover;
-    padding: 300px;
-    text-align: center;
+  background: url("./im/background Coffee.jpg") no-repeat center center/cover;
+  padding: 180px 20px;  /* reduced padding for balance */
+  text-align: center;
+  color: #fff;
+  position: relative;
 }
+
+.hero-align h1,
+.hero-align p {
+  z-index: 2;
+  position: relative;
+}
+
+.hero-align::after {
+  content: "";
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background: rgba(0, 0, 0, 0.3); /* overlay for readability */
+  z-index: 1;
+}
+
+/* Menu section */
 .ourMenu {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 40px;
-    padding: 60px;
-    background-color: #f9f5f0; /* light coffee background */
+  display: flex;
+  flex-wrap: wrap; /* allow wrapping on small screens */
+  align-items: center;
+  justify-content: center;
+  gap: 40px;
+  padding: 60px 20px;
+  background-color: #f9f5f0;
 }
 
 .ourMenu figure img {
-    width: 350px;
-    height: auto;
-    border-radius: 10px;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+  width: 300px;
+  max-width: 100%;
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
 }
 
+/* Text block */
 .waiter h2 {    
-    font-size: 2rem;
-    color: #3e2723; /* coffee dark */
-    margin-bottom: 15px;
+  font-size: 2rem;
+  color: #3e2723;
+  margin-bottom: 15px;
 }
 
 .waiter p {
-    font-size: 1.1rem;
-    color: #555;
-    margin-bottom: 20px;
+  font-size: 1.1rem;
+  color: #555;
+  margin-bottom: 20px;
+  line-height: 1.5;
 }
 
+/* Button */
 .waiter button {
-    padding: 12px 28px;
-    border: none;
-    background-color: #a0522d;
-    color: #fff;
-    font-size: 1rem;
-    border-radius: 25px;
-    cursor: pointer;
-    transition: 0.3s ease;
+  padding: 12px 28px;
+  border: none;
+  background-color: #a0522d;
+  color: #fff;
+  font-size: 1rem;
+  border-radius: 25px;
+  cursor: pointer;
+  transition: background 0.3s ease, transform 0.2s;
 }
 
 .waiter button:hover {
-    background-color: #3e2723;
+  background-color: #3e2723;
+  transform: scale(1.05);
 }
 
-@media (max-width: 600px) {
-    .waiter h2{
-        font-size: 1.5rem;
-    }
-    .hero-align {
-    background: url("./im/background Coffee.jpg") no-repeat center center/contain;
-    text-align: center;
-    padding: 200px;
-}
+/* Responsive tweaks */
+@media (max-width: 768px) {
+  .hero-align {
+    padding: 120px 20px;
+    background-size: cover; /* keep cover for consistency */
+  }
+
+  .waiter h2 {
+    font-size: 1.6rem;
+  }
 }
 
+@media (max-width: 480px) {
+  .hero-align {
+    padding: 80px 15px;
+  }
+
+  .ourMenu {
+    gap: 20px;
+    padding: 40px 15px;
+  }
+
+  .ourMenu figure img {
+    width: 100%;
+  }
+
+  .waiter h2 {
+    font-size: 1.4rem;
+  }
+
+  .waiter p {
+    font-size: 1rem;
+  }
+}

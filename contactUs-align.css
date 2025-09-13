@@ -3,52 +3,74 @@
   justify-content: center;
   align-items: center;
   padding: 60px 20px;
-  background-color: #f9f5f0; 
+  background-color: #f9f5f0;
 }
 
 .contactUs-align form {
-  background: white;
-  padding: 30px 40px;
+  background: #fff;
+  padding: 30px 35px;
   border-radius: 15px;
-  box-shadow: 0 6px 15px rgba(0,0,0,0.2);
+  box-shadow: 0 6px 15px rgba(0,0,0,0.15);
   display: flex;
   flex-direction: column;
-  gap: 15px;
+  gap: 18px;
   width: 100%;
-  max-width: 400px;
+  max-width: 450px;
 }
 
 .contactUs-align form h3 {
   font-size: 1.8rem;
-  color: #3e2723; 
-  margin-bottom: 15px;
+  color: #3e2723;
+  margin-bottom: 10px;
   text-align: center;
+  font-weight: 600;
 }
 
-.contactUs-align form input {
+.contactUs-align form input,
+.contactUs-align form textarea {
   padding: 12px 15px;
   border: 1px solid #ccc;
   border-radius: 8px;
   font-size: 1rem;
   outline: none;
-  transition: border-color 0.3s ease;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+  resize: none;
 }
 
-.contactUs-align form input:focus {
-  border-color: #a0522d; 
+.contactUs-align form input:focus,
+.contactUs-align form textarea:focus {
+  border-color: #a0522d;
+  box-shadow: 0 0 5px rgba(160, 82, 45, 0.3);
 }
 
 .contactUs-align form button {
   padding: 14px;
-  background: #a0522d; 
-  color: white;
+  background: #a0522d;
+  color: #fff;
   font-size: 1rem;
-  font-weight: bold;    
+  font-weight: bold;
+  border: none;
   border-radius: 25px;
   cursor: pointer;
-
+  transition: background 0.3s ease, transform 0.2s ease;
 }
 
 .contactUs-align form button:hover {
-  background: #3e2723; 
+  background: #3e2723;
+  transform: scale(1.03);
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .contactUs-align {
+    padding: 40px 15px;
+  }
+
+  .contactUs-align form {
+    padding: 20px;
+  }
+
+  .contactUs-align form h3 {
+    font-size: 1.5rem;
+  }
 }

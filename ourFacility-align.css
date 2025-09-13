@@ -1,53 +1,65 @@
+/* Section wrapper */
 .ourFacility-align {
-    padding: 60px 10%;
-    text-align: center;
-    background-color: #fdf6f0; 
+  padding: 60px 10%;
+  text-align: center;
+  background-color: #fdf6f0;
 }
 
 .ourFacility-align h2 {
-    font-size: 2.2rem;
-    color: #3e2723;
-    margin-bottom: 40px;
+  font-size: 2.2rem;
+  color: #3e2723;
+  margin-bottom: 40px;
 }
 
+/* Grid layout */
 .grid-4 {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr; /* 4 equal columns */
-    gap: 30px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); /* cleaner syntax */
+  gap: 30px;
 }
 
+/* Facility card */
 .facilityCard {
-    background-color: #fff;
-    padding: 20px;
-    border-radius: 12px;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
-    text-align: center;
+  background-color: #fff;
+  padding: 25px 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .facilityCard img {
-    width: 80px;
-    height: auto;
-    margin-bottom: 15px;
+  width: 80px;
+  height: auto;
+  margin-bottom: 15px;
 }
 
 .facilityCard h3 {
-    font-size: 1.2rem;
-    color: #3e2723;
-    margin-bottom: 10px;
+  font-size: 1.2rem;
+  color: #3e2723;
+  margin-bottom: 10px;
 }
 
 .facilityCard p {
-    font-size: 1rem;
-    color: #555;
+  font-size: 1rem;
+  color: #555;
+  line-height: 1.5;
 }
 
 .facilityCard:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+  transform: translateY(-8px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+}
+
+/* Responsive tweaks */
+@media (max-width: 1024px) {
+  .grid-4 {
+    grid-template-columns: repeat(2, 1fr); /* 2 columns for tablets */
+  }
 }
 
 @media (max-width: 600px) {
-    .grid-4 {
-        grid-template-columns: 1fr; /* single column */
-    }
+  .grid-4 {
+    grid-template-columns: 1fr; /* single column for mobiles */
+  }
 }
