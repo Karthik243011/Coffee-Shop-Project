@@ -1,0 +1,53 @@
+.ourFacility-align {
+    padding: 60px 10%;
+    text-align: center;
+    background-color: #fdf6f0; 
+}
+
+.ourFacility-align h2 {
+    font-size: 2.2rem;
+    color: #3e2723;
+    margin-bottom: 40px;
+}
+
+.grid-4 {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr; /* 4 equal columns */
+    gap: 30px;
+}
+
+.facilityCard {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    text-align: center;
+}
+
+.facilityCard img {
+    width: 80px;
+    height: auto;
+    margin-bottom: 15px;
+}
+
+.facilityCard h3 {
+    font-size: 1.2rem;
+    color: #3e2723;
+    margin-bottom: 10px;
+}
+
+.facilityCard p {
+    font-size: 1rem;
+    color: #555;
+}
+
+.facilityCard:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+}
+
+@media (max-width: 600px) {
+    .grid-4 {
+        grid-template-columns: 1fr; /* single column */
+    }
+}

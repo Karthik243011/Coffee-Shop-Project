@@ -1,0 +1,65 @@
+
+.logo img {
+    width: 100px;
+    height: 100px;
+}
+
+.hero-align {
+    background: url("./im/background Coffee.jpg") no-repeat center center/cover;
+    padding: 300px;
+    text-align: center;
+}
+.ourMenu {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 40px;
+    padding: 60px;
+    background-color: #f9f5f0; /* light coffee background */
+}
+
+.ourMenu figure img {
+    width: 350px;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+}
+
+.waiter h2 {    
+    font-size: 2rem;
+    color: #3e2723; /* coffee dark */
+    margin-bottom: 15px;
+}
+
+.waiter p {
+    font-size: 1.1rem;
+    color: #555;
+    margin-bottom: 20px;
+}
+
+.waiter button {
+    padding: 12px 28px;
+    border: none;
+    background-color: #a0522d;
+    color: #fff;
+    font-size: 1rem;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+.waiter button:hover {
+    background-color: #3e2723;
+}
+
+@media (max-width: 600px) {
+    .waiter h2{
+        font-size: 1.5rem;
+    }
+    .hero-align {
+    background: url("./im/background Coffee.jpg") no-repeat center center/contain;
+    text-align: center;
+    padding: 200px;
+}
+}
+

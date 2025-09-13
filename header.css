@@ -1,0 +1,95 @@
+/* Basic NavBar styling */
+* {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+header{
+    background-color: #f9f5f0;
+    
+}
+.navBar {
+  width: 100%;
+  background-color: #fff;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  position: fixed;
+  top: 0;
+  z-index: 1000;
+}
+
+.navContainer {
+  max-width: 1200px;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+}
+
+.navLinks ul {
+  display: flex;
+  list-style: none;
+}
+
+.navLinks ul li {
+  margin: 0 15px;
+}
+
+.navLinks ul li a {
+  text-decoration: none;
+  color: #333;
+  font-weight: bold;
+}
+
+/* Hamburger Menu - hidden on desktop */
+.menu-toggle {
+  display: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+/* Cart icon styling */
+.cart-icon {
+  position: relative;
+  cursor: pointer;
+}
+
+#cart-count {
+  position: absolute;
+  top: -8px;
+  right: -8px;
+  background: red;
+  color: white;
+  border-radius: 50%;
+  font-size: 0.75rem;
+  padding: 2px 6px;
+}
+
+/* Responsive Styling */
+@media (max-width: 768px) {
+  .navLinks {
+    position: absolute;
+    top: 90px;
+    left: 100%;
+    width: 100%;
+    background-color: #fff;
+    transition: 0.3s;
+    text-align: center;
+  }
+
+  .navLinks ul {
+    flex-direction: column;
+  }
+
+  .navLinks ul li {
+    margin: 15px 0;
+  }
+
+  .menu-toggle {
+    display: block;
+  }
+
+  .navLinks.active {
+    left: 0;
+  }
+}

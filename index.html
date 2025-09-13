@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Coffee Shop</title>
+  <link rel="stylesheet" href="./Main.css">
+  <link rel="stylesheet" href="./ourFacility-align.css">
+  <link rel="stylesheet" href="./popularMenu-align.css">
+  <link rel="stylesheet" href="./ourGallery.css">
+  <link rel="stylesheet" href="./contactUs-align.css">
+  <link rel="stylesheet" href="./footer-align.css">
+  <link rel="stylesheet" href="./cart.css">
+  <link rel="stylesheet" href="./header.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+</head>
+<body>
+
+  <!-- HEADER / NAVBAR -->
+ <header id="home">
+  <nav class="navBar">
+    <div class="navContainer">
+      <div class="logo">
+        <img src="./im/Logo.png" alt="logo">
+      </div>
+
+      <!-- Hamburger Menu -->
+      <div class="menu-toggle" id="menu-toggle">
+        <i class="fa-solid fa-bars"></i>
+      </div>
+
+      <div class="navLinks" id="navLinks">
+        <ul>
+          <li><a href="#home">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#menu">Menu</a></li>
+          <li><a href="#gallery">Gallery</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </div>
+
+      <div class="cart-icon">
+        <i class="fa-solid fa-cart-shopping"></i>
+        <span id="cart-count">0</span>
+      </div>
+    </div>
+  </nav>
+
+  <div class="hero-align"></div>
+</header>
+
+
+  <main>
+    <!-- ABOUT / HOME SECTION -->
+    <section class="ourMenu" id="about">
+      <figure><img src="./im/img2.png" alt="menu"></figure>
+      <div class="waiter">
+        <h2>A Cup Of Coffee Can Complete Your Day</h2>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+        <button>Our Menu</button>
+      </div>
+    </section>
+
+    <!-- FACILITY SECTION -->
+    <section class="ourFacility-align" id="menu">
+      <h2> Our Facility</h2>
+      <div class="grid-4">
+        <div class="facilityCard">
+          <img src="./im/facility_1.png" alt="">
+          <h3>Varieties Of Coffee</h3>
+          <p>Lorem Ipsum Dolor, Sit Amet.</p>
+        </div>
+        <div class="facilityCard">
+          <img src="./im/facility_2.png" alt="">
+          <h3>Coffee Beans</h3>
+          <p>Lorem Ipsum Dolor, Sit Amet.</p>
+        </div>
+        <div class="facilityCard">
+          <img src="./im/facility_3.png" alt="">
+          <h3>Breakfast & Sweets</h3>
+          <p>Lorem Ipsum Dolor, Sit Amet.</p>
+        </div>
+        <div class="facilityCard">
+          <img src="./im/facility_4.png" alt="">
+          <h3>Ready To Go Coffee</h3>
+          <p>Lorem Ipsum Dolor, Sit Amet.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- POPULAR MENU WITH ADD TO CART -->
+    <section class="popularMenu-align"  id="menu">
+      <h2><img src="./assets/images/heading.png" alt=""> Popular Menu</h2>
+      <div class="grid-3">
+        <div class="menuCard">
+          <img src="./im/Menu1.jpg" alt="">
+          <p>Cold Coffee - ₹120</p>
+          <button onclick="addToCart('Cold Coffee', 120)">Add to Cart</button>
+        </div>
+        <div class="menuCard">
+          <img src="./im/Menu2.jpg" alt="">
+          <p>Cappuccino - ₹150</p>
+          <button onclick="addToCart('Cappuccino', 150)">Add to Cart</button>
+        </div>
+        <div class="menuCard">
+          <img src="./im/Menu3.avif" alt="">
+          <p>Mocha Coffee - ₹180</p>
+          <button onclick="addToCart('Mocha Coffee', 180)">Add to Cart</button>
+        </div>
+        <div class="menuCard">
+          <img src="./im/Menu4.webp" alt="">
+          <p>Frappuccino - ₹200</p>
+          <button onclick="addToCart('Frappuccino', 200)">Add to Cart</button>
+        </div>
+        <div class="menuCard">
+          <img src="./im/Menu5.jpg" alt="">
+          <p>Black Coffee - ₹100</p>
+          <button onclick="addToCart('Black Coffee', 100)">Add to Cart</button>
+        </div>
+        <div class="menuCard">
+          <img src="./im/Menu6.jpg" alt="">
+          <p>Choco Latte - ₹170</p>
+          <button onclick="addToCart('Choco Latte', 170)">Add to Cart</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- GALLERY SECTION -->
+    <section class="ourGallery" id="gallery">
+      <h2><img src="./im/heading.png" alt=""><br>Our Gallery</h2>
+      <div class="grid-3">
+        <img src="./im/Gallery1.jpg" alt="">
+        <img src="./im/Gallery2.jpg" alt="">
+        <img src="./im/Gallery3.jpg" alt="">
+        <img src="./im/Gallery4.jpg" alt="">
+        <img src="./im/Gallery5.webp" alt="">
+        <img src="./im/Gallery6.jpg" alt="">
+      </div>
+    </section>
+
+    <!-- CONTACT SECTION -->
+    <section class="contactUs-align" id="contact">
+      <form>
+        <h3>Book a Table</h3>
+        <input type="text" placeholder="Enter your name" required>
+        <input type="tel" placeholder="Enter your number" required>
+        <input type="number" placeholder="How many guests" required>
+        <button type="submit">Send Message</button>
+      </form>
+    </section>
+
+    <!-- CART SECTION -->
+    <section class="cart-section" id="cart">
+      <h2>Your Cart</h2>
+      <ul id="cart-items"></ul>
+      <p>Total: ₹<span id="cart-total">0</span></p>
+    </section>
+  </main>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="footer-align">
+      <div><i class="fa-solid fa-envelope"></i><p>Karthik.g3011@gmail.com</p></div>
+      <div><i class="fa-regular fa-clock"></i><p>07:00am - 09:00pm</p></div>
+      <div><i class="fa-solid fa-location-dot"></i><p>Bangalore,Karnataka 560070</p></div>
+      <div><i class="fa-solid fa-phone"></i><p>+91-978-611-4424<br>+91-890-458-5775</p></div>
+    </div>
+    <p class="copyright">© 2025 by <span>Karthik</span> | All rights reserved</p>
+  </footer>
+
+  <!-- LINK TO JS -->
+  <script src="./script.js"></script>
+</body>
+</html>
