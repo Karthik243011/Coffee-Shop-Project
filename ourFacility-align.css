@@ -51,14 +51,9 @@
   box-shadow: 0 8px 20px rgba(0,0,0,0.2);
 }
 
-/* Responsive tweaks */
-@media (max-width: 1024px) {
-  .grid-4 {
-    grid-template-columns: repeat(2, 1fr); /* 2 columns for tablets */
-  }
-}
 
-@media (max-width: 600px) {
+
+@media (max-width: 576px) {
   .grid-4 {
     grid-template-columns: 1fr; /* single column for mobiles */
   }

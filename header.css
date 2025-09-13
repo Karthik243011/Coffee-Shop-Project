@@ -76,7 +76,7 @@ header {
 }
 
 /* Responsive */
-@media (max-width: 768px) {
+@media (max-width: 576px) {
   .navLinks {
     position: absolute;
     top: 100%;

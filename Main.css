@@ -78,19 +78,9 @@
   transform: scale(1.05);
 }
 
-/* Responsive tweaks */
-@media (max-width: 768px) {
-  .hero-align {
-    padding: 120px 20px;
-    background-size: cover; /* keep cover for consistency */
-  }
 
-  .waiter h2 {
-    font-size: 1.6rem;
-  }
-}
 
-@media (max-width: 480px) {
+@media (max-width: 576px) {
   .hero-align {
     padding: 80px 15px;
   }

@@ -61,7 +61,7 @@
 }
 
 /* Responsive */
-@media (max-width: 600px) {
+@media (max-width: 576px) {
   .contactUs-align {
     padding: 40px 15px;
   }
