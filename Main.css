@@ -7,7 +7,7 @@
 /* Hero section */
 .hero-align {
   background: url("./im/background Coffee.jpg") no-repeat center center/cover;
-  padding: 180px 20px;  /* reduced padding for balance */
+  padding: 380px 20px;  /* desktop padding */
   text-align: center;
   color: #fff;
   position: relative;
@@ -78,11 +78,22 @@
   transform: scale(1.05);
 }
 
-
-
+/* ✅ Responsive Fix */
 @media (max-width: 576px) {
   .hero-align {
-    padding: 80px 15px;
+    background: url("./im/background Coffee.jpg") no-repeat center center;
+    background-size: cover;
+    padding: 120px 20px;   /* smaller padding */
+    min-height: 60vh;      /* ensures enough space */
+    text-align: center;
+  }
+
+  .hero-align h1 {
+    font-size: 1.8rem;     /* scale down text */
+  }
+
+  .hero-align p {
+    font-size: 1rem;
   }
 
   .ourMenu {
