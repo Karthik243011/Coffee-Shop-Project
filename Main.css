@@ -80,7 +80,7 @@
 
 
 
-@media (max-width: 576px) {
+@media (max-width: 480px) {
   .hero-align {
     background: url("./im/background Coffee.jpg") no-repeat center center;
     background-size: contain;
