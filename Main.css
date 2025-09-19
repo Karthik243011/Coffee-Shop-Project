@@ -7,7 +7,7 @@
 /* Hero section */
 .hero-align {
   background: url("./im/background Coffee.jpg") no-repeat center center/cover;
-  padding: 380px 20px;  /* reduced padding for balance */
+  padding: 280px 20px;  /* reduced padding for balance */
   text-align: center;
   color: #fff;
   position: relative;
@@ -78,6 +78,7 @@
   transform: scale(1.05);
 }
 
+
 /* Fix horizontal overflow at 576px and below */
 @media screen and (max-width: 576px) {
 
@@ -139,4 +140,3 @@
     margin: 5px;
   }
 }
-
