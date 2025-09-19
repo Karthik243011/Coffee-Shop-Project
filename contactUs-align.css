@@ -60,17 +60,4 @@
   transform: scale(1.03);
 }
 
-/* Responsive */
-@media (max-width: 480px) {
-  .contactUs-align {
-    padding: 40px 15px;
-  }
 
-  .contactUs-align form {
-    padding: 20px;
-  }
-
-  .contactUs-align form h3 {
-    font-size: 1.5rem;
-  }
-}
