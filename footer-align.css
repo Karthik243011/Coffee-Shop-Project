@@ -49,18 +49,4 @@ footer .copyright span {
   font-weight: 600;
 }
 
-/* Responsive */
-@media (max-width: 480px) {
-  .footer-align {
-    grid-template-columns: 1fr;
-    gap: 40px;
-  }
 
-  .footer-align i {
-    font-size: 1.6rem;
-  }
-
-  .footer-align p {
-    font-size: 1rem;
-  }
-}
