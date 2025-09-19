@@ -36,8 +36,4 @@
 }
 
 
-@media (max-width: 480px) {
-  .ourGallery .grid-3 {
-    grid-template-columns: 1fr; /* single column on mobile */
-  }
-}
+
