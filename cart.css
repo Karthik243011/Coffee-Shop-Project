@@ -49,28 +49,3 @@
   border-top: 1px solid rgba(0,0,0,0.1);
   padding-top: 10px;
 }
-
-@media (max-width: 480px) {
-  .cart-section {
-    padding: 15px;
-    margin: 20px;
-  }
-
-  .cart-section h2 {
-    font-size: 1.4rem;
-    margin-bottom: 15px;
-  }
-
-  #cart-items li {
-    font-size: 0.9rem;
-    padding: 8px 10px;
-    margin: 6px 0;
-    flex-direction: column; /* stack items on small screens */
-    align-items: flex-start;
-    gap: 5px;
-  }
-
-  .cart-section p {
-    font-size: 1rem;
-  }
-}
