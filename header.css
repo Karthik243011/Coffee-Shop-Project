@@ -15,7 +15,6 @@ header {
   width: 100%;
   background-color: #fff;
   box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-  position: fixed;
   top: 0;
   left: 0;
   z-index: 1000;
@@ -87,42 +86,68 @@ header {
   padding: 2px 6px;
 }
 
-/* Responsive */
+/* ==================== NAVBAR RESPONSIVE (≤576px) ==================== */
 @media (max-width: 576px) {
+  .navBar .navContainer {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    padding: 10px;
+  }
+
+  /* Hamburger toggle visible on mobile */
+  .menu-toggle {
+    display: block;
+    font-size: 1.5rem;
+    cursor: pointer;
+  }
+
+  /* Menu links hidden by default */
   .navLinks {
+    display: none;
+    flex-direction: column;
     position: absolute;
-    top: 100%;
-    left: -100%; /* hide by default */
+    top: 60px; /* adjust according to navbar height */
+    left: 0;
     width: 100%;
-    background-color: #fff;
-    text-align: center;
-    transition: left 0.3s ease-in-out;
-    padding: 20px 0;
+    background-color: #000; /* navbar background */
+    padding: 10px 0;
+    z-index: 1000;
+    margin-top: 85px;
+  }
+
+  /* Show menu when active */
+  .navLinks.active {
+    display: flex;
   }
 
   .navLinks ul {
     flex-direction: column;
+    gap: 10px;
+    list-style: none;
+    padding: 0;
+    margin: 0;
   }
 
-  .navLinks ul li {
-    margin: 15px 0;
-  }
-
-  .menu-toggle {
+  .navLinks ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1rem;
+    padding: 10px 20px;
     display: block;
   }
 
-  /* When active (JS will add this class) */
-  .navLinks.active {
-    left: 0;
+  /* Cart icon position */
+  .cart-icon {
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    font-size: 1.2rem;
   }
-
-  /* Shrink logo & cart icon on mobile */
-  .logo img {
-    width: 30px;
-  }
-
-  .cart-icon img {
-    width: 25px;
+    .logo img {
+    width: 120px;    /* adjust width as needed */
+    height: 130px;    /* maintain aspect ratio */
   }
 }
+
