@@ -78,31 +78,65 @@
   transform: scale(1.05);
 }
 
+/* Fix horizontal overflow at 576px and below */
+@media screen and (max-width: 576px) {
 
+  /* Ensure body & html don't overflow */
+  body, html {
+    overflow-x: hidden;
+  }
 
-@media (max-width: 480px) {
+  /* Navbar / menu container */
+  .navContainer {
+    flex-wrap: wrap;
+    padding: 10px 10px;
+  }
+
+  /* Hero / section images */
   .hero-align {
     background: url("./im/background Coffee.jpg") no-repeat center center;
     background-size: contain;
     padding: 250px; /* reduce padding for mobile */
     text-align: center;
+    height: 205px;
   }
-
-  .ourMenu {
-    gap: 20px;
-    padding: 40px 15px;
-  }
-
-  .ourMenu figure img {
+  .ourMenu figure img,
+  .menuCard img,
+  .facilityCard img,
+  .ourGallery img {
     width: 100%;
+    height: auto;
   }
 
-  .waiter h2 {
-    font-size: 1.4rem;
+  /* Grids: facility / menu / gallery */
+  .grid-4,
+  .grid-3 {
+    grid-template-columns: 1fr !important;
+    gap: 15px;
   }
 
-  .waiter p {
-    font-size: 1rem;
+  /* Popular menu & facility card adjustments */
+  .menuCard,
+  .facilityCard {
+    width: 100%;
+    margin: 0 auto;
   }
 
+  /* Padding fixes */
+  section, .ourMenu, .ourFacility-align, .popularMenu-align, .ourGallery, .contactUs-align {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+
+  /* Cart & hero alignment fixes */
+  .cart-section, .hero-align {
+    width: 100%;
+    padding: 15px;
+  }
+
+  /* Prevent menu toggle / cart icon overlap */
+  .menu-toggle, .cart-icon {
+    margin: 5px;
+  }
 }
+
