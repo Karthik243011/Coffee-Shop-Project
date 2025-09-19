@@ -50,7 +50,7 @@ footer .copyright span {
 }
 
 /* Responsive */
-@media (max-width: 576px) {
+@media (max-width: 480px) {
   .footer-align {
     grid-template-columns: 1fr;
     gap: 40px;
